@@ -61,8 +61,8 @@ const Home = () => {
                   .map((num, index) => (
                     <Chip
                       style={{
-                        height: "50px",
-                        width: "50px",
+                        height: "40px",
+                        width: "40px",
                         borderRadius: "100%",
                         margin: "5px",
                         background: isChecked(index + 1) ? "#f1c40f" : "",
@@ -165,8 +165,8 @@ const Home = () => {
               {checked.map((num) => (
                 <Chip
                   style={{
-                    height: "50px",
-                    width: "50px",
+                    height: "40px",
+                    width: "40px",
                     borderRadius: "100%",
                     margin: "5px",
                     fontWeight: 900,
