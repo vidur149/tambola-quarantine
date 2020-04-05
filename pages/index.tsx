@@ -54,25 +54,34 @@ const Home = () => {
       >
         <Grid container spacing={3}>
           <Grid item container md={8} xs={12}>
-            <Grid item xs={12} style={{ paddingTop: "20px" }}>
+            <Grid item xs={12}>
               <TambolaBoard>
                 {Array(BORAD_NUMBERS)
                   .fill(0)
                   .map((num, index) => (
-                    <Chip
-                      style={{
-                        height: "40px",
-                        width: "40px",
-                        borderRadius: "100%",
-                        margin: "5px",
-                        background: isChecked(index + 1) ? "#f1c40f" : "",
-                        fontWeight: 900,
-                      }}
+                    <div
                       key={index}
-                      size="medium"
-                      label={index + 1}
-                      color="secondary"
-                    />
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Chip
+                        style={{
+                          height: "50px",
+                          width: "50px",
+                          borderRadius: "100%",
+                          fontSize: "12px",
+                          margin: "2px",
+                          background: isChecked(index + 1) ? "#f1c40f" : "",
+                          fontWeight: 900,
+                        }}
+                        size="medium"
+                        label={index + 1}
+                        color="secondary"
+                      />
+                    </div>
                   ))}
               </TambolaBoard>
             </Grid>
@@ -83,6 +92,7 @@ const Home = () => {
               xs={12}
               alignItems="center"
               justify="space-between"
+              style={{ paddingTop: "20px" }}
             >
               <Grid item>
                 <Button
@@ -157,7 +167,7 @@ const Home = () => {
             </Typography>
             <div
               style={{
-                maxHeight: "70vh",
+                maxHeight: "60vh",
                 overflowY: "scroll",
                 paddingTop: "20px",
               }}
@@ -165,10 +175,10 @@ const Home = () => {
               {checked.map((num) => (
                 <Chip
                   style={{
-                    height: "40px",
-                    width: "40px",
+                    height: "50px",
+                    width: "50px",
                     borderRadius: "100%",
-                    margin: "5px",
+                    margin: "2px",
                     fontWeight: 900,
                   }}
                   key={num}
