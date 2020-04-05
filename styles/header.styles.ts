@@ -7,12 +7,12 @@ export const StyledHeader = styled("header")(({ theme }: { theme: any }) => {
     width: "100%",
     top: 0,
     background: "white",
-    height: "100px",
+    height: "60px",
 
     "& > div:first-child": {
       position: "fixed",
       zIndex: 2,
-      height: "100px",
+      height: "60px",
       top: 0,
       left: 0,
       padding: "0 8%",
@@ -43,7 +43,7 @@ export const StyledHeader = styled("header")(({ theme }: { theme: any }) => {
       top: 0,
       right: 0,
       width: "35%",
-      height: "100px",
+      height: "60px",
       backgroundColor: theme.colors.bgBlue,
       zIndex: 1,
       [theme.breakpoints.down("sm")]: {

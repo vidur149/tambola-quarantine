@@ -54,6 +54,29 @@ const Home = () => {
       >
         <Grid container spacing={3}>
           <Grid item container md={8} xs={12}>
+            <Grid item xs={12} style={{ paddingTop: "20px" }}>
+              <TambolaBoard>
+                {Array(BORAD_NUMBERS)
+                  .fill(0)
+                  .map((num, index) => (
+                    <Chip
+                      style={{
+                        height: "50px",
+                        width: "50px",
+                        borderRadius: "100%",
+                        margin: "5px",
+                        background: isChecked(index + 1) ? "#f1c40f" : "",
+                        fontWeight: 900,
+                      }}
+                      key={index}
+                      size="medium"
+                      label={index + 1}
+                      color="secondary"
+                    />
+                  ))}
+              </TambolaBoard>
+            </Grid>
+
             <Grid
               item
               container
@@ -119,28 +142,6 @@ const Home = () => {
                   PICK NUMBER
                 </Button>
               </Grid>
-            </Grid>
-            <Grid item xs={12} style={{ paddingTop: "20px" }}>
-              <TambolaBoard>
-                {Array(BORAD_NUMBERS)
-                  .fill(0)
-                  .map((num, index) => (
-                    <Chip
-                      style={{
-                        height: "50px",
-                        width: "50px",
-                        borderRadius: "100%",
-                        margin: "5px",
-                        background: isChecked(index + 1) ? "#f1c40f" : "",
-                        fontWeight: 900,
-                      }}
-                      key={index}
-                      size="medium"
-                      label={index + 1}
-                      color="secondary"
-                    />
-                  ))}
-              </TambolaBoard>
             </Grid>
           </Grid>
           <Grid item md={4} xs={12}>
